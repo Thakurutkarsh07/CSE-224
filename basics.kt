@@ -1,6 +1,6 @@
 fun main(){
-    val a = 9
-    println(a)
-    var b = 2
-    println(b)
+    val name = "\t Ram \n Ram \t Ram \n \t Ram "
+
+    print(name)
+
 }
