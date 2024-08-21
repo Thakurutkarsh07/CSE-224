@@ -1,7 +1,19 @@
 fun main(){
-    val name = "Utkarsh Pratap Singh"
-    println("Hello $name, How's your day going?")
-    val a = 10
-    val b = 20
-    println("The Sum of $a + $b = ${a+b}")
+    greeting()
+    println(name())
+    println(greetName("Utkarsh"))//Function calling by passing arguments
+}
+
+fun greeting(){
+    println("Hello Utkarsh")
+}
+//Function returning value
+fun name(): String{
+    val name = "Utkarsh"
+    return name
+}
+//Function having parameter
+fun greetName(name: String): String{
+    val greet = "Hello $name"
+    return greet
 }
