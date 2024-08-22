@@ -12,6 +12,7 @@ fun main(){
     val k: Int = a as Int // Unsafe casting
     val b: String = "hi"
 //    val d: Int = b as Int // It will throw ClassCastException
+
     val c: String? = b as? String // safe casting
     if(c==null){
         println("Safe casting failed")
