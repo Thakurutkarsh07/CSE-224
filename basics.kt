@@ -1,43 +1,22 @@
 fun main(){
-    //Array of integers
-    val numbers = arrayOf(1,2,3,4,5,6)
-    println(numbers[0])
-    //Array o string
-    val words: Array<String> = arrayOf("utkarsh","Pratap","Singh")
-    println(words[0])
-    //Array of Multiples of 2
-    val multiple = Array(8) {i->i*2}
-    println(multiple[1])
-    //Accessing Elements
-    val firstNum = numbers[0]
-    val secondWord = words[1]
+    //Type Conversion
+    val x: Int = 89
+    val y: Long = x.toLong()
+    println(y)
 
-    println("First number in array: $firstNum")
-    println("Second word in array: $secondWord")
+    //Safe and Unsafe Casting
+//    Safe casting by using "as?" it returns null
+//     Unsafe casting by using "as"
 
-    //Modifying Element of Array by index
-    numbers[0] = 10
-    multiple[0] = 1
-    println("First number in array: $firstNum")
-    println("First Multiple of 2 in array: ${multiple[0]}")
-
-    //Iterating over Array
-    //Using for loop
-    for (num in multiple) {
-        println(num)
+    val a: Int = 8
+    val k: Int = a as Int // Unsafe casting
+    val b: String = "hi"
+//    val d: Int = b as Int // It will throw ClassCastException
+    val c: String? = b as? String // safe casting
+    if(c==null){
+        println("Safe casting failed")
+    }else{
+        println("$c")
     }
-    //2-D Arrays
-    val arr = arrayOf(arrayOf(2,2,2,3,4,5),arrayOf(1,2,3,4,5,5),arrayOf(9,8,7,5,2,3))
-
-    val matrix: Array<Array<Int>> = arrayOf(arrayOf(2,2,2,3,4,5),arrayOf(1,2,3,4,5,5),arrayOf(1,2,3,75,72,75))
-
-    println(matrix[1][2])
-    println(arr[1][4])
-    //Print 2-D Arrays
-    for (i in arr) {
-        for(j in i) {
-            print("$j ")
-        }
-        println()
     }
-}
+
