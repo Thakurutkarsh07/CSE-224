@@ -1,72 +1,83 @@
-fun main(){
-    //Operators
+import java.time.MonthDay
 
-    var a =5
-    var b =4
-    val isTrue = true
-    val isFalse = false
-    val add = a + b
-    //arithmetic operators
-    println("Sum of $a + $b = ${a+b}")
-    println("Multiply of $a * $b = ${a*b}")
-    println("Subtraction of $a * $b = ${a-b}")
-    println("Division of $a * $b = ${a/b}")
-    println("Modulo of $a * $b = ${a%b}")
-    //comparison Operators
-    val isEqual = a==b
-    println("$a == $b: $isEqual")
-    println("$a > $b: ${a>b}")
-    println("$a >= $b: ${a>=b}")
-    println("$a < $b: ${a<b}")
-    println("$a >= $b: ${a>=b}")
-    println("$a != $b: ${a!=b}")
-
-
-    //Logical Operators
-    val isBothTrue = isTrue && isFalse
-    println("Both the value is true: $isBothTrue")
-    println("Anyone of the value is true: ${isTrue || isFalse}")
-
-
-
-    // Assignment operators
-    var sum =3
-    sum+=a
-    println("Value of sum after adding a to it is:$sum")
-    sum-=b
-    println("Value of sum after subtracting b to it is:$sum")
-    sum*=8
-    println("Value of sum after Multiplying 2 to it is:$sum")
-    sum/=a
-    println("Value of sum after Dividing by 2 to it is:$sum")
-    sum%=2
-    println("Value of sum after Modulo of 2 to it is:$sum")
-
-    sum = 2
-    //Unary Operators
-    sum = +sum //Unary Plus
-    println("Value of sum :$sum")
-    sum = -sum //Unary minus
-    println("Value of sum :$sum")
-    ++sum
-    println("Value of sum :$sum")
-    --sum
-    println("Value of sum :$sum")
-
-//    println("Value of !a :${!a}")//Not
-
-
-
-    //Bitwise Operators
-    println("Value of a before shifting to left:$a")
-    a.shl(3)
-    println("Value of a after shifting to left:$a")
-    println("Value of b before shifting to right:$b")
-    b.shr(3)
-    println("Value of b after shifting to right:$b")
-
-    //Range and iterator Operators
-
-
-
+fun main() {
+//    val temperatur = 25
+//    if(temperatur>20) {
+//        println("it's a warm day.")
+//
+//    }
+    val score = 85
+    if (score >= 90) {
+        println("You got A Grade")
+    } else if (score >= 80) {
+        println("Grade b")
+    } else if (score >= 70) {
+        println("Grade: C")
+    } else {
+        println("Grade: D")
     }
+
+//Nested if-else
+    val age = 25
+    val hasID = true
+    if (age >= 18){
+        if (hasID){
+            "You caan enter the club"
+        }else{
+            println("ID required to enter the club")
+        }
+    }else{
+        println("You cannot enter the club")
+    }
+    //Calculator
+    val a = 5
+    val b =10
+    val op = "*"
+    if (op=="*"){
+        println("$a * $b = ${a*b}")
+    }else if (op=="/"){
+        println("$a / $b = ${a/b}")
+    }else if (op == "+"){
+        println("$a + $b = ${a+b}")
+    }
+
+    ques1()
+    whenControl()
+}
+fun ques1() {
+    val age = 19
+    if(age<13){
+        println("You're a child")
+    }else if(age in 13..19){
+        println("You're a Teenager")
+    }else if(age in 20..64){
+        println("You're an adult")
+    }else{
+        println("You're a senior")
+    }
+
+}
+
+fun whenControl(){
+    val dayOfWeek = 3
+    val dayName = when(dayOfWeek){
+        1-> "Monday"
+        2-> "Tuesday"
+        3-> "Wednessday"
+        4-> "Thursday"
+        5-> "Friday"
+        6-> "Saturday"
+        7-> "Sunday"
+        else-> "Invalid day"
+    }
+
+    println("Day of the week: $dayName")
+
+    //'when' as a statement
+    val num = 8
+    when{
+        num%2==0 -> println("Number is even")
+        num%2!=0 -> println("Number is odd")
+        else -> println("Unexpected Number")
+    }
+}
