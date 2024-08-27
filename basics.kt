@@ -22,7 +22,7 @@ fun main() {
     val hasID = true
     if (age >= 18){
         if (hasID){
-            "You caan enter the club"
+            "You can enter the club"
         }else{
             println("ID required to enter the club")
         }
@@ -43,6 +43,9 @@ fun main() {
 
     ques1()
     whenControl()
+    forLoop()
+    whileLoop()
+    greet("Utkarsh")
 }
 fun ques1() {
     val age = 19
@@ -80,4 +83,65 @@ fun whenControl(){
         num%2!=0 -> println("Number is odd")
         else -> println("Unexpected Number")
     }
+
+}
+fun forLoop() {
+    //"For" Loop
+    println("For loop of range i -> 2 to 6 6 is excluded")
+    for (i in 2 until 6){
+        println(i)
+    }
+    println("For loop of range i -> 2 to 6")
+
+    for (i in 2..6){
+        println(i)
+    }
+
+    println("For loop of range i -> 6 to 0")
+    for (i in 6 downTo 0){
+        println(i)
+    }
+
+    println("For loop of range i -> 6 to 0 with stepping value")
+    for (i in 6 downTo 0 step 2){
+        println(i)
+    }
+
+    //Iterating over a list
+    val fruits = listOf("Apple","Banana","Pineapple","Kiwi")
+    for (fruit in fruits){
+        println("fruit: $fruit")
+    }
+
+//By using index val
+    for (index in fruits.indices){
+        println("fruit of index $index: ${fruits[index]}")
+    }
+
+}
+
+//While Loop
+fun whileLoop(){
+    var i = 5
+    //While loop
+    while (i>0){
+        println(i)
+        i--
+    }
+    var j = 5
+    println()
+    //do-While
+    do {
+        println(j)
+        j--
+    } while (j>0)
+    println()
+    do {
+        j++
+        println(j)
+    } while (j<=5)
+}
+
+fun greet(name : String){
+    println("Hello,$name")
 }
