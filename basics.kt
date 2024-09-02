@@ -1,62 +1,106 @@
+fun factorial(n: Int): Long {
+    return if (n == 0 || n == 1) {
+        1
+    } else {
+        n * factorial(n - 1)
+    }
+}
+fun fibonacci(n: Int): Int {
+    return if (n <= 1) {
+        n
+    } else {
+        fibonacci(n - 1) + fibonacci(n - 2)
+    }
+}
+//The Primary Constuctor is a simple concise way to initialiZe class. it is right after the class name;
+//the secondary constructor is an additional way to create an object. It's useful when you need to setup the object
+class Person{
+    var name: String
+    var age: Int
+    constructor(x: String,y: Int){
+        this.name = x
+        this.age = y
+    }
+    constructor(x: String){
+        this.name = x
+        this.age = 0
+    }
+    constructor(){
+        this.name = "Heena"
+        this.age = 32
+    }
+fun intro(){
+    println("My name is $name and age is $age")
+}
 
+}
 
+class Person1(var name: String,var age: Int){
+    constructor(x: String):this(){
+        this.name = x
+        this.age = 0
+    }
+    constructor():this("rahul",50)
+    fun intro(){
+        println("My name is $name and age is $age")
+    }
+}
+
+class Student{
+    fun result(){
+        println("Pending")
+    }
+}
 fun main() {
-//
-    println("Enter your name")
-    val name = readLine() ?:"Unknown"
-    println("Enter your password")
-    val password = readLine() ?:""
-    val users  = arrayOf(arrayOf("Utkarsh","pass1"),arrayOf("Rahul","pass2"),arrayOf("Raj","pass3"))
-
-    var found = false
-    val fahr = readLine()
-    val celsius = readLine()
-
-
-    for(names in users){
-        if(names[0]==name && password == names[1]){
-            found = true
-            break
-        }else{
-            println("Invalid credentials")
-        }
+    //Factorial
+    val number = 5
+    println("Factorial of $number = ${factorial(number)}")
+//Fibonacci Series
+    val terms = 10
+    println("Fibonacci Series up to $terms terms:")
+    for (i in 0 until terms) {
+        print("${fibonacci(i)} ")
     }
-    if(found){
-        println("Hello $name. Good to see you Again!")
-    }else{
-        println("User not found")
+    //OOPS
+    var s1 = Student()
+    s1.result()
+
+    var a = Person("Rahul",23)
+    a.intro()
+    var b = Person("Rahul")
+    b.intro()
+    var c = Person()
+    c.intro()
+
+    var d =Person1("utkarsh",21)
+    d.intro()
+    var e = Person1("Rohit")
+    e.intro()
+    var f = Person1()
+    f.intro()
+    val myRectangle = Rectangle(3.0,5.0)
+    myRectangle.display()
+    val mySquare = Square(3.0)
+    mySquare.display()
+}
+
+
+
+
+//base class-->parent
+//derive class--> child
+
+open class  Rectangle(val a: Double, val b: Double){
+    fun area(): Double{
+        return a*b
     }
-    greet("Utkarsh")
-//    greetDefault(name)
-    sum()
-    sum(19+10)
-    println("Multiply : 5 x 4 = ${multiply(5,4)}")
-}
-fun greet(name : String){
-    println("Hello,$name")
-}
+    open fun display(){
+        println("area of rectangle is with dimension $a * $b is ${area()} ")
+    }
 
-//Default argument
-fun greetDefault(name: String = "User"){
-    println("Hello,$name")
 }
-
-fun sum(a: Int=10,b: Int=20){
-    println("Sum of $a + $b is ${a+b}")
+class Square(side: Double):Rectangle(side,side){
+    override fun display() {
+        println("area of square with side $a is ${area()}")
+    }
 }
-
-fun multiply(a: Int,b: Int) : Int{
-    val c = a *b
-    return c
-}
-
-fun celsiusTo(temperature: Int) : Double{
-    var fahrenheit = (temperature * 1.8) + 32
-    return fahrenheit
-}
-fun fahrenheit(temperature: Int) : Int{
-    var celsius = 5/9 * temperature -32
-    return celsius
-}
-//factorial
-//fibonaci series
