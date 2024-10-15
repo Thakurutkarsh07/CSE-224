@@ -1,6 +1,9 @@
 package com.example.demo
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,10 +14,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        val a = findViewById<EditText>(R.id.editTextText3)
+        val b = findViewById<EditText>(R.id.editTextText2)
+        val btn = findViewById<Button>(R.id.button)
+        val txt = findViewById<TextView>(R.id.textView2)
+        btn.setOnClickListener{
+            var c = a.text.toString()
+            var d = b.text.toString()
+            txt.text = "Your Name is" + c + "Your Age is " + d
         }
     }
 }

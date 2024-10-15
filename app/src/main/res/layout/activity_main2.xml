@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pizza"
+    >
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:shadowColor="#EFA106"
+        android:text="Select Your Pizza "
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="9mm"
+        android:id="@+id/rg"
+        >
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="9dp"
+            android:shadowColor="#EFA106"
+
+            android:text="Margherita"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="129dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="9dp"
+            android:shadowColor="#EFA106"
+
+            android:text="Farm House"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="9dp"
+            android:shadowColor="#EFA106"
+
+            android:text="Cheese Burst"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="9dp"
+            android:shadowColor="#EFA106"
+
+            android:text="Veg Grill"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="307dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:shadowColor="#EFA106"
+            android:text="Select your Topping"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="#EFA106"
+            android:text="Paneer"
+            android:textColor="#FFFFFF" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="#EFA106"
+            android:text="Cheese"
+            android:textColor="#FFFFFF" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="#EFA106"
+            android:text="Jalapeno"
+            android:textColor="#FFFFFF" />
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="#EFA106"
+            android:text="Black Olives"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="312dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Select Pizza Size"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/radioButton5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Small: 8 inches"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/radioButton6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medium: 10 inches"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/radioButton7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Large: 12 inches"
+                android:textColor="@color/white" />
+        </RadioGroup>
+
+    </RadioGroup>
+
+</LinearLayout>
