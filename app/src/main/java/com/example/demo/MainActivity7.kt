@@ -27,9 +27,10 @@ class MainActivity7 : AppCompatActivity() {
         }
 
         urlBtn.setOnClickListener{
-            val i1 = Intent(Intent.ACTION_VIEW, Uri.parse("www.google.co.in"))
-            i1.setPackage("com.android.chrome")
+            val i1 = Intent(Intent.ACTION_VIEW, Uri.parse("https://google.co.in"))
             startActivity(i1)
         }
+
+
     }
 }

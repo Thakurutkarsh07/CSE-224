@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="settings"
+        android:id="@+id/i1"
+        android:icon="@drawable/mobile"
+        app:showAsAction="always"
+        />
+    <item android:title="lpu"
+        android:id="@+id/i2"
+        android:icon="@drawable/lpu"
+        app:showAsAction="always"
+        />
+    <item android:title="contact"
+        android:id="@+id/i3"
+        android:icon="@drawable/tv"
+        app:showAsAction="always"
+        />
+    <item android:title="about"
+        android:id="@+id/i4"
+        android:icon="@drawable/im2"
+        app:showAsAction="always"
+        />
+</menu>
